@@ -1,5 +1,5 @@
-# My aliases
-
+# Global aliases, normally available on all machines
+#
 alias l='ls'
 alias ll='ls -l'
 alias l.='ls -A'
@@ -12,5 +12,9 @@ alias e='vim'
 alias grep='grep --color=auto'
 alias pgrep='pgrep -l'
 alias rmbaks='find . -name "*~" -exec rm {} \;'
-alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
-alias screenx='screenx.sh && exit'
+
+# Local aliases
+#
+[ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
+[ -x ${HOME}/bin/screenx.sh ] && alias screenx='screenx.sh && exit'
+[ -x /usr/bin/ack-grep ] && alias ack='ack-grep'
