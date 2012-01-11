@@ -103,6 +103,6 @@ endtry
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set iskeyword+=:        " Perl class name auto completion
-nnoremap ,pt  :%!perltidy -q<cr>   " for  'normal' mode
-vnoremap ,pt  :!perltidy -q<cr>    " for 'visual' mode
+nnoremap ,y  :%!perltidy -q<cr>   " for 'normal' mode
+vnoremap ,y  :!perltidy -q<cr>    " for 'visual' mode
 
