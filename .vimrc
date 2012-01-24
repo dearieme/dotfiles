@@ -54,7 +54,7 @@ map ' :set hls!<bar>set hls?<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set t_Co=256
-colorscheme pyte
+colorscheme desert256
 
 set encoding=utf8
 
