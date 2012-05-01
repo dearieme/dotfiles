@@ -38,8 +38,10 @@ set novisualbell
 set t_vb=
 
 " Change cursor per mode
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+if has("gui_running")
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Searching 
@@ -54,7 +56,6 @@ map ' :set hls!<bar>set hls?<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set t_Co=256
-colorscheme desert256
 
 set encoding=utf8
 
@@ -62,6 +63,7 @@ set encoding=utf8
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
+  colorscheme desert256
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
