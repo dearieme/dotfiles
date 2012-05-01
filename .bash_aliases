@@ -17,5 +17,5 @@ alias rmbaks='find . -name "*~" -exec rm {} \;'
 # Local aliases
 #
 [ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
-[ -x ${HOME}/bin/screenx.sh ] && alias screenx='screenx.sh && sleep 5 && exit'
+[ -x ${HOME}/bin/screenx.sh ] && alias screenx='screenx.sh && sleep 10 && exit'
 [ -x /usr/bin/ack-grep ] && alias ack='ack-grep'
