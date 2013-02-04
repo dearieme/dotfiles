@@ -12,7 +12,7 @@ alias rm='rm -i'
 alias e='vim'
 alias grep='grep --color=auto'
 alias pgrep='pgrep -l'
-alias rmbaks='find . -name "*~" -exec rm {} \;'
+alias tmux='tmux -2'
 
 # Local aliases
 #
