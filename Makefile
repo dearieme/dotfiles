@@ -3,3 +3,4 @@ install:
 	cp -r .gitconfig ${HOME}
 	cp -r .tmux* ${HOME}
 	cp .xinitrc ${HOME}
+	cp .Xdefaults ${HOME}
