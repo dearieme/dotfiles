@@ -4,3 +4,4 @@ install:
 	cp -r .tmux* ${HOME}
 	cp .xinitrc ${HOME}
 	cp .Xdefaults ${HOME}
+	cp .mpdconf ${HOME}
