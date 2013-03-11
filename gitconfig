@@ -1,10 +1,8 @@
 [user]
-	email = scott@dearie.me.uk
-	name = dearieme
+  email = scott@dearie.me.uk
+  name = dearieme
 [color]
   ui = auto
-[color "diff"]
-  commit = blue
 [alias]
   st = status
   ci = commit
