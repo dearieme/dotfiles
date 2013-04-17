@@ -11,7 +11,6 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias e='vim'
 alias grep='grep --color=auto'
-alias pgrep='pgrep -l'
 alias tmux='tmux -2'
 
 # Local aliases
@@ -19,3 +18,4 @@ alias tmux='tmux -2'
 [ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
 [ -x ${HOME}/bin/screenx.sh ] && alias screenx='screenx.sh && sleep 10 && exit'
 [ -x /usr/bin/ack-grep ] && alias ack='ack-grep'
+[ -x /usr/bin/tmux ] && alias tmux='tmux -2'
