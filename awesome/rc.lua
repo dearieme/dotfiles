@@ -44,7 +44,7 @@ modkey     = "Mod4"
 terminal   = "urxvtc"
 editor     = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
-browser    = "chromium"
+browser    = "chromium-browser"
 mail       = "claws-mail"
 volcmd     = "amixer -c 0 -q set Master"
 volup      = volcmd .. " 2dB+"
@@ -317,7 +317,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey            }, "r",      function() mypromptbox[mouse.screen]:run() end),
     awful.key({ modkey            }, "p",      function() menubar.show() end),
 
-    awful.key({}, "XF86HomePage",
+    awful.key({}, "XF86WWW",
         function() awful.util.spawn_with_shell(browser) end
     ),
     awful.key({}, "XF86Mail",
