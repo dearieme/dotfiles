@@ -441,9 +441,7 @@ awful.rules.rules = {
     { rule       = { class    = "pinentry" },
       properties = { floating = true } },
     { rule       = { class    = "gimp" },
-      properties = { floating = true } },
-    { rule       = { class    = "URxvt" },
-      properties = { tag      = tags[1][1] } }
+      properties = { floating = true } }
 }
 -- }}}
 
