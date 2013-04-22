@@ -9,6 +9,8 @@ else
   export PAGER="/usr/bin/less"
 fi
 
+set -o vi
+
 # Add my bin to path
 PATH="$HOME/bin:${PATH}";
 export PATH;
