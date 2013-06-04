@@ -9,9 +9,7 @@ alias du1='du -h --max-depth=1'
 alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
-alias e='vim'
 alias grep='grep --color=auto'
-alias tmux='tmux -2'
 
 # Local aliases
 #
@@ -19,3 +17,8 @@ alias tmux='tmux -2'
 [ -x ${HOME}/bin/screenx.sh ] && alias screenx='screenx.sh && sleep 10 && exit'
 [ -x /usr/bin/ack-grep ] && alias ack='ack-grep'
 [ -x /usr/bin/tmux ] && alias tmux='tmux -2'
+
+[ -x /usr/bin/cave ] && alias caves='cave sync && cave -c no resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world' \
+  && alias caver='cave resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world' \
+  && alias caverx='cave resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world -x'
+
