@@ -19,6 +19,6 @@ alias grep='grep --color=auto'
 [ -x /usr/bin/tmux ] && alias tmux='tmux -2'
 
 [ -x /usr/bin/cave ] && alias caves='cave sync && cave -c no resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world' \
-  && alias caver='cave resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world' \
-  && alias caverx='cave resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world -x'
+  && alias caver='cave -c no resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world' \
+  && alias caverx='cave -c no resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world -x'
 
