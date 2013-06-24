@@ -80,11 +80,11 @@ local layouts = {
 -- if we have 2 screens make dominant screen number 2
 tags = {
    names  = { "一", "二", "三", "四", "五" },
-   layout = { layouts[5], layouts[1], layouts[2], layouts[2], layouts[2] }
+   layout = { layouts[5], layouts[2], layouts[2], layouts[1], layouts[2] }
 }
 tags2 = {
    names  = { "一", "二", "三" },
-   layout = { layouts[2], layouts[1], layouts[2] }
+   layout = { layouts[2], layouts[2], layouts[1] }
 }
 for s = 1, screen.count() do
     if s == 1 then
