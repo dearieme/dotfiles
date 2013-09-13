@@ -317,7 +317,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey            }, "r",      function() mypromptbox[mouse.screen]:run() end),
     awful.key({ modkey            }, "p",      function() menubar.show() end),
 
-    awful.key({}, "XF86WWW",
+    awful.key({}, "XF86HomePage",
         function() awful.util.spawn_with_shell(browser) end
     ),
     awful.key({}, "XF86Mail",
