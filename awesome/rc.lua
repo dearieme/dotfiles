@@ -147,21 +147,6 @@ volbar:buttons(awful.util.table.join(
    awful.button({}, 5, function () awful.util.spawn_with_shell( voldown, false) end)
 ))
 
--- mpd
-musicicon = wibox.widget.imagebox()
-musicicon:set_image(beautiful.widget_music)
-
-mpdwidget = wibox.widget.textbox()
-vicious.register(mpdwidget, vicious.widgets.mpd,
-    function (widget, args)
-        if args["{state}"] == "Stop" then
-            return " - "
-        else
-            return args["{Artist}"] .. ' - ' .. args["{Title}"]
-        end
-    end,
-10)
-
 -- Set the terminal for applications that require it
 menubar.utils.terminal = terminal
 
@@ -237,8 +222,6 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right - inelegant
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then
-        right_layout:add(musicicon)
-        right_layout:add(mpdwidget)
         right_layout:add(separator)
         right_layout:add(volicon)
         right_layout:add(volbar)
