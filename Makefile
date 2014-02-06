@@ -9,4 +9,3 @@ install:
 	cp -r awesome ${HOME}/.config/
 	cp xinitrc ${HOME}/.xinitrc
 	cp Xresources ${HOME}/.Xresources
-	cp mpdconf ${HOME}/.mpdconf
