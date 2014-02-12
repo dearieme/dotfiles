@@ -15,3 +15,7 @@
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
   ign = ls-files -o -i --exclude-standard
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
