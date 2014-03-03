@@ -22,5 +22,5 @@ alias grep='grep --color=auto'
   && alias caver='cave -c no resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world' \
   && alias caverx='cave -c no resolve --complete --purge '\''*/*'\'' --permit-downgrade '\''*/*'\'' --continue-on-failure if-satisfied world -x'
 
-[ -x /usr/bin/git ] && alias gim='vim -p `git status --porcelain | awk '"'"'{print $2}'"'"'`'
+[ -x /usr/bin/git ] && alias gim='vim -p `git status --short | awk '"'"'{print $2}'"'"'`'
 
