@@ -515,7 +515,6 @@ end
 
 
 -- Start some applications and services
-run_once("/usr/libexec/polkit-gnome-authentication-agent-1")
 run_once("xscreensaver -no-splash")
 run_once("nm-applet &")
 run_once("xfce4-power-manager --restart")
