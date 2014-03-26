@@ -16,7 +16,7 @@ urxvt*urgentOnBell:       true
 ! Extensions
 urxvt*perl-lib:        /usr/lib/urxvt/perl/
 urxvt*perl-ext-common: default,matcher,searchable-scrollback
-urxvt*url-launcher:     /usr/bin/chromium-browser
+urxvt*url-launcher:    /usr/bin/google-chrome-beta
 urxvt*matcher.button:  1
 ! catch ugly URLs
 urxvt.cutchars:        `()'*<>[]{|}"
@@ -64,3 +64,7 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
+!-- Colours instead of decorations --!
+URxvt.colorIT:      #87af5f
+URxvt.colorBD:      #d7d7d7
+URxvt.colorUL:      #87afd7
