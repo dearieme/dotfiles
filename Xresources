@@ -22,7 +22,7 @@ urxvt*matcher.button:  1
 urxvt.cutchars:        `()'*<>[]{|}"
 
 ! Fonts
-urxvt*font:       xft:Liberation Mono:style=Regular:pixelsize=12
+urxvt*font:        xft:Inconsolata:style=Regular:size=11:antialias=true:hinting=true
 ! Cursor
 urxvt*cursorColor: #DCDCCC
 
