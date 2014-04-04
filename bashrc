@@ -22,10 +22,13 @@ export HISTIGNORE="fg"
 export HISTCONTROL=ignoredups
 
 # Activate bash-completion, Gentoo...
-[ -f /etc/profile.d/bash-completion.sh ] && source /etc/profile.d/bash-completion.sh
+[ -r /etc/profile.d/bash-completion.sh ] && source /etc/profile.d/bash-completion.sh
 
 # ... Debian...
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+[ -r /etc/bash_completion ] && source /etc/bash_completion
+
+# ... Arch...
+[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 # Read my aliases
 [ -f ${HOME}/.bash_aliases ] && source ${HOME}/.bash_aliases
