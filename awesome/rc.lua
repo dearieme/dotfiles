@@ -45,7 +45,6 @@ terminal   = "urxvtc"
 editor     = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 browser    = "chromium-browser"
-mail       = "claws-mail"
 volcmd     = "amixer -c 0 -q set Master"
 volup      = volcmd .. " 2dB+"
 voldown    = volcmd .. " 2dB-"
@@ -303,9 +302,6 @@ globalkeys = awful.util.table.join(
     awful.key({}, "XF86HomePage",
         function() awful.util.spawn_with_shell(browser) end
     ),
-    awful.key({}, "XF86Mail",
-        function() awful.util.spawn_with_shell(mail) end
-    ),
     awful.key({}, "XF86Calculator",
         function() awful.util.spawn_with_shell(terminal .. " -e bc") end
     ),
@@ -518,6 +514,5 @@ end
 run_once("xscreensaver -no-splash")
 run_once("nm-applet &")
 run_once("xfce4-power-manager --restart")
-run_once(mail)
 run_once("/home/scott/.config/awesome/tmux_ide.sh")
 
