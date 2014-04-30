@@ -11,8 +11,8 @@ fi
 
 set -o vi
 
-# Add my bin to path
-PATH="$HOME/bin:${PATH}";
+# Add my local bins to path
+PATH="$HOME/.cabal/bin:$HOME/bin:${PATH}";
 export PATH;
 
 # History control
