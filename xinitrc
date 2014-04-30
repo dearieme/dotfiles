@@ -12,6 +12,7 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 if [[ "$(xrandr | grep 'VGA-0 connected')" != "" ]]; then
   xrandr --output VGA-0 --off;
+  xrandr --output LVDS --off;
   xrandr --auto;
   xrandr --output VGA-0 --left-of LVDS;
   xrandr --output LVDS --primary;
