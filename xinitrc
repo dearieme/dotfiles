@@ -18,6 +18,7 @@ if [[ "$(xrandr | grep 'VGA-0 connected')" != "" ]]; then
 fi
 
 setxkbmap gb
+xmodmap ~/.Xmodmap
 urxvtd -q -f -o
 
 exec awesome \
