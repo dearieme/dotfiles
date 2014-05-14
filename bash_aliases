@@ -18,3 +18,8 @@ alias grep='grep --color=auto'
 [ -x /usr/bin/tmux ] && alias tmux='tmux -2'
 [ -x /usr/bin/git ] && alias gim='vim -p `git status --short | awk '"'"'{print $2}'"'"'`'
 
+if [ -x /usr/bin/xrandr ]; then
+  alias ext2on='xrandr --output LVDS --off; xrandr --output DisplayPort-0 --mode 1920x1080; xrandr --output VGA-0 --left-of DisplayPort-0 --mode 1920x1080';
+  alias ext2off='xrandr --output DisplayPort-0 --off; xrandr --output VGA-0 --off; xrandr --output LVDS --mode 1600x900';
+fi
+
