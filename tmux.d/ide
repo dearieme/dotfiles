@@ -6,17 +6,5 @@ splitw -v -p 24
 selectp -t 0
 neww
 renamew 'host1'
-selectp -t 0
-splitw -h -p 56
-selectp -t 0
-splitw -v -p 24
-selectp -t 0
-selectw -t 0
 neww
 renamew 'host2'
-selectp -t 0
-splitw -h -p 56
-selectp -t 0
-splitw -v -p 24
-selectp -t 0
-selectw -t 0
