@@ -1,15 +1,7 @@
 # Preferred apps
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
-
-VIMPPATH=`which vimpager`
-if [ -e $VIMPPATH ]; then
-  export PAGER=$VIMPPATH
-  alias less=$PAGER
-  alias zless=$PAGER
-else
-  export PAGER="/usr/bin/less"
-fi
+export PAGER="/usr/bin/less"
 
 set -o vi
 
