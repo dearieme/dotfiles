@@ -2,9 +2,10 @@
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
 
-if [ -f /usr/bin/most ]; then
-  export PAGER="/usr/bin/most"
-  export MOST_SWITCHES="-w"
+if [ -f /usr/bin/vimpager ]; then
+  export PAGER="/usr/bin/vimpager"
+  alias less=$PAGER
+  alias zless=$PAGER
 else
   export PAGER="/usr/bin/less"
 fi
