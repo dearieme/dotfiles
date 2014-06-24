@@ -2,8 +2,9 @@
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
 
-if [ -f /usr/bin/vimpager ]; then
-  export PAGER="/usr/bin/vimpager"
+VIMPPATH=`which vimpager`
+if [ -e $VIMPPATH ]; then
+  export PAGER=$VIMPPATH
   alias less=$PAGER
   alias zless=$PAGER
 else
