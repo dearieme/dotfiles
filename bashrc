@@ -30,6 +30,9 @@ export HISTCONTROL=ignoredups
 # Freshly brewed Perl :)
 [ -f ${HOME}/perl5/perlbrew/etc/bashrc ] && source ${HOME}/perl5/perlbrew/etc/bashrc 
 
+# Set default libvirt connection URI
+[ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
+
 # Prompts, make root special
 if [[ ${EUID} == 0 ]] ; then
   PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
