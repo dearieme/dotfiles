@@ -20,6 +20,6 @@ alias grep='grep --color=auto'
 
 if [ -x /usr/bin/xrandr ]; then
   alias ext2on='xrandr --output LVDS1 --off; xrandr --output HDMI1 --mode 1920x1080; xrandr --output VGA1 --left-of HDMI1 --mode 1920x1080';
-  alias ext2off='xrandr --output HDMI1 --off; xrandr --output VGA1 --off; xrandr --output LVDS1 --mode 1600x900';
+  alias ext2off='xrandr --output HDMI1 --off; xrandr --output VGA1 --off; xrandr --output LVDS1 --mode 1366x768';
 fi
 
