@@ -11,4 +11,6 @@ install:
 	cp xinitrc ${HOME}/.xinitrc
 	cp Xresources ${HOME}/.Xresources
 	cp Xmodmap ${HOME}/.Xmodmap
+	cp xmobarrc ${HOME}/.xmobarrc
+	cp xmonad.hs ${HOME}/.xmonad/
 

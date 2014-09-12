@@ -22,7 +22,7 @@ alias fuck='sudo $(history -p \!\!)'
 if [ -x /usr/bin/xrandr ]; then
   alias ext1on='xrandr --output VGA1 --mode 1680x1050 --left-of LVDS1';
   alias ext1off='xrandr --output VGA1 --off';
-  alias ext2on='xrandr --output LVDS1 --off; xrandr --output HDMI1 --mode 1920x1080; xrandr --output VGA1 --left-of HDMI1 --mode 1920x1080';
+  alias ext2on='xrandr --output LVDS1 --off; xrandr --output HDMI1 --mode 1920x1080; xrandr --output VGA1 --right-of HDMI1 --mode 1920x1080';
   alias ext2off='xrandr --output HDMI1 --off; xrandr --output VGA1 --off; xrandr --output LVDS1 --mode 1366x768';
 fi
 
