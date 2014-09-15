@@ -2,7 +2,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.EZConfig
 
--- The main function.
+-- The main function
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
 -- Command to launch the bar
@@ -20,8 +20,11 @@ myConfig = defaultConfig
     , borderWidth = myBorderWidth
     }
     `additionalKeysP`
-    [ ("M-<F12>",  spawn "xscreensaver-command -lock") ]
+    [ ("M-<F12>",  spawn "xscreensaver-command -lock")
+    , ("<XF86MonBrightnessUp>", spawn "xbacklight +5")
+    , ("<XF86MonBrightnessDown>", spawn "xbacklight -5")
+    ]
 
 myTerminal    = "urxvtc"
-myModMask     = mod4Mask -- Win key or Super_L
+myModMask     = mod4Mask
 myBorderWidth = 1
