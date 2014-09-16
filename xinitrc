@@ -20,6 +20,7 @@ setxkbmap gb
 xmodmap ~/.Xmodmap
 
 xscreensaver -no-splash &
+unclutter &
 urxvtd -q -f -o
 
 exec xmonad
