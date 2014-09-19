@@ -23,6 +23,8 @@ myConfig = defaultConfig
     [ ("M-<F12>",  spawn "xscreensaver-command -lock")
     , ("<XF86MonBrightnessUp>", spawn "xbacklight +5")
     , ("<XF86MonBrightnessDown>", spawn "xbacklight -5")
+    -- For post kb hotplug...
+    , ("M-<F11>", spawn "setxkbmap gb && xmodmap /home/scott/.Xmodmap")
     ]
 
 myTerminal    = "urxvtc"
