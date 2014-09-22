@@ -16,6 +16,8 @@
   ls = ls-files
   ign = ls-files -o -i --exclude-standard
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [difftool]
-	prompt = false
+  prompt = false
+[rebase]
+  autosquash = true
