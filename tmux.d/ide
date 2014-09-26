@@ -5,6 +5,6 @@ selectp -t 0
 splitw -v -p 24
 selectp -t 0
 neww
-renamew 'host1'
+renamew 'ardbeg'
 neww
-renamew 'host2'
+renamew 'dalwhinnie'
