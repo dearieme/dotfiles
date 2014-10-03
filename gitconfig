@@ -11,8 +11,8 @@
   df = diff
   dc = diff --cached
   lg = log -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --no-merges
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --no-merges --all
   ls = ls-files
   ign = ls-files -o -i --exclude-standard
 [diff]
