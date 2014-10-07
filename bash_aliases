@@ -17,7 +17,7 @@ alias fuck='sudo $(history -p \!\!)'
 [ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
 [ -x /usr/bin/ack-grep ] && alias ack='ack-grep'
 [ -x /usr/bin/tmux ] && alias tmux='tmux -2'
-[ -x /usr/bin/git ] && alias gim='vim -p `git status --short | awk '"'"'{print $2}'"'"'`'
+[ -x /usr/bin/git ] && alias gim='vim `git status -uall --short | awk '"'"'{print $2}'"'"'`'
 
 if [ -x /usr/bin/xrandr ]; then
   alias ext1on='xrandr --output VGA1 --mode 1680x1050 --left-of LVDS1';
