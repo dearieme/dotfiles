@@ -15,9 +15,13 @@ alias fuck='sudo $(history -p \!\!)'
 # Local aliases
 #
 [ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
-[ -x /usr/bin/ack-grep ] && alias ack='ack-grep'
-[ -x /usr/bin/tmux ] && alias tmux='tmux -2'
-[ -x /usr/bin/git ] && alias gim='vim -p `git status --short | awk '"'"'{print $2}'"'"'`'
+[ -x /usr/bin/ack-grep ]    && alias ack='ack-grep'
+[ -x /usr/bin/tmux ]        && alias tmux='tmux -2'
+
+if [ -x /usr/bin/git ]; then
+  alias gim='vim -p `git status --short | awk '"'"'{print $2}'"'"'`'
+  alias gtasks='git log -p -G "(FIXME|TODO)" origin/master.. | grep -E "FIXME|TODO" | sed -e "s/^+ \+//"'
+fi
 
 if [ -x /usr/bin/xrandr ]; then
   alias ext1on='xrandr --output VGA1 --mode 1680x1050 --left-of LVDS1';
