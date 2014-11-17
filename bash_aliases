@@ -19,7 +19,7 @@ alias fuck='sudo $(history -p \!\!)'
 [ -x /usr/bin/tmux ]        && alias tmux='tmux -2'
 
 if [ -x /usr/bin/git ]; then
-  alias gim='vim -p `git status -uall --short | awk '"'"'{print $2}'"'"'`'
+  alias gim='vim `git status -uall --short | awk '"'"'{print $2}'"'"'`'
   alias gtasks='git log -p -G "(FIXME|TODO)" origin/master.. | grep -E "FIXME|TODO" | sed -e "s/^+ \+//"'
 fi
 
