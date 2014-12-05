@@ -8,6 +8,7 @@ urxvt*secondaryScroll:    true
 urxvt*saveLines:         65535
 urxvt*cursorBlink:       false
 urxvt*urgentOnBell:       true
+urxvt*iso14755:          false
 !urxvt*override-redirect:false
 !urxvt*borderLess:       false
 !urxvt*internalBorder:       0
