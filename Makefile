@@ -4,6 +4,7 @@ install:
 	cp bash_logout ${HOME}/.bash_logout
 	cp bash_aliases ${HOME}/.bash_aliases
 	cp gitconfig ${HOME}/.gitconfig
+	cp gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
 	cp tmux.conf ${HOME}/.tmux.conf
 	cp ssh/rc ${HOME}/.ssh/rc
 	cp -r tmux.d/* ${HOME}/.tmux.d
