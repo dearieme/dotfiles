@@ -3,6 +3,7 @@ install:
 	cp bash_profile ${HOME}/.bash_profile
 	cp bash_logout ${HOME}/.bash_logout
 	cp bash_aliases ${HOME}/.bash_aliases
+	cp editrc ${HOME}/.editrc
 	cp gitconfig ${HOME}/.gitconfig
 	cp gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
 	cp tmux.conf ${HOME}/.tmux.conf
