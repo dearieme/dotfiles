@@ -8,6 +8,7 @@ urxvt*secondaryScroll:    true
 urxvt*saveLines:         65535
 urxvt*cursorBlink:       false
 urxvt*urgentOnBell:       true
+urxvt*iso14755:          false
 !urxvt*override-redirect:false
 !urxvt*borderLess:       false
 !urxvt*internalBorder:       0
@@ -22,7 +23,8 @@ urxvt*matcher.button:  1
 urxvt.cutchars:        `()'*<>[]{|}"
 
 ! Fonts
-urxvt*font:        xft:Inconsolata:style=Regular:size=11:antialias=true:hinting=true
+!urxvt*font:        xft:Inconsolata for Powerline:size=13
+urxvt*font:        xft:Meslo LG M for Powerline:style=RegularForPowerline:size=9
 ! Cursor
 urxvt*cursorColor: #DCDCCC
 
@@ -58,7 +60,6 @@ urxvt*color15:     #ffffff
 urxvt*letterSpace: -1
 
 !-- Xft settings -- !
-Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
