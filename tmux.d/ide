@@ -1,10 +1,8 @@
 renamew 'local'
 selectp -t 0
-splitw -h -p 60
-selectp -t 0
-splitw -v -p 50
+splitw -h
 selectp -t 0
 neww
 renamew 'ardbeg'
 neww
-renamew 'dalwhinnie'
+renamew 'local2'
