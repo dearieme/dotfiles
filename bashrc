@@ -9,6 +9,8 @@ set -o vi
 PATH="$HOME/.cabal/bin:$HOME/bin:${PATH}";
 export PATH;
 
+[ -x /usr/bin/keychain ] && eval $(keychain --eval -Q --quiet)
+
 # History control
 export HISTSIZE=5000
 export HISTFILESIZE=5000
@@ -28,7 +30,7 @@ export HISTCONTROL=ignoredups
 [ -f ${HOME}/.bash_aliases ] && source ${HOME}/.bash_aliases
 
 # Freshly brewed Perl :)
-[ -f ${HOME}/perl5/perlbrew/etc/bashrc ] && source ${HOME}/perl5/perlbrew/etc/bashrc 
+[ -f ${HOME}/perl5/perlbrew/etc/bashrc ] && source ${HOME}/perl5/perlbrew/etc/bashrc
 
 # Set default libvirt connection URI
 [ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
