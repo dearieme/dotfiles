@@ -3,9 +3,6 @@
 xrdb -merge ~/.Xresources
 numlockx
 
-# Start DBUS
-source /etc/X11/xinit/xinitrc.d/30-dbus.sh
-
 xsetroot -cursor_name left_ptr
 
 setxkbmap gb

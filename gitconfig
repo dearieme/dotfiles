@@ -19,5 +19,7 @@
   tool = vimdiff
 [difftool]
   prompt = false
+[log]
+  date = iso8601
 [rebase]
   autosquash = true
