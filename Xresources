@@ -23,8 +23,10 @@ urxvt*matcher.button:  1
 urxvt.cutchars:        `()'*<>[]{|}"
 
 ! Fonts
-!urxvt*font:        xft:Inconsolata for Powerline:size=13
-urxvt*font:        xft:Meslo LG M for Powerline:style=RegularForPowerline:size=9
+!urxvt*font:        xft:Terminess Powerline:size=13
+
+urxvt*font:        xft:Inconsolata for Powerline:size=12
+! urxvt*font:        xft:Meslo LG M for Powerline:style=RegularForPowerline:size=9
 ! Cursor
 urxvt*cursorColor: #DCDCCC
 
@@ -57,7 +59,7 @@ urxvt*color13:     #e628ba
 urxvt*color14:     #7D7DFB
 urxvt*color15:     #ffffff
 
-urxvt*letterSpace: -1
+! urxvt*letterSpace: -1
 
 !-- Xft settings -- !
 Xft.antialias:  true
