@@ -3,6 +3,4 @@ selectp -t 0
 splitw -h
 selectp -t 0
 neww
-renamew 'ardbeg'
-neww
 renamew 'local2'
