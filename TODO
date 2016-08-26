@@ -7,15 +7,6 @@ General
 * Clipboard - try to get clipboard to work across tmux/vim/X/remote hosts
 * tmux - any way to get notification on URL launch
 
-Awesome
--------
-
-* Key binding to bring up logout options box
-* Alternative to nm-applet - it is very resource hungry, seriously, why does
-  it consume four times as much memory as the window manager
-* Keypad numbers don't behave as numbers for tag selection (xev says they are
-  KP_n
-
 Vim
 ---
 
