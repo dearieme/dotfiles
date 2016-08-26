@@ -10,7 +10,6 @@ install:
 	cp ssh/rc ${HOME}/.ssh/rc
 	cp -r tmux.d/* ${HOME}/.tmux.d
 	cp tmux_ide.sh ${HOME}/bin/
-	cp -r awesome ${HOME}/.config/
 	cp xinitrc ${HOME}/.xinitrc
 	cp Xresources ${HOME}/.Xresources
 	cp Xmodmap ${HOME}/.Xmodmap
