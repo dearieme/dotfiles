@@ -24,9 +24,12 @@ if [ -x /usr/bin/git ]; then
 fi
 
 if [ -x /usr/bin/xrandr ]; then
-  alias ext1on='xrandr --output VGA1 --mode 1680x1050 --left-of LVDS1';
-  alias ext1off='xrandr --output VGA1 --off';
-  alias ext2on='xrandr --output LVDS1 --off; xrandr --output HDMI1 --mode 1920x1080; xrandr --output VGA1 --right-of HDMI1 --mode 1920x1080';
-  alias ext2off='xrandr --output HDMI1 --off; xrandr --output VGA1 --off; xrandr --output LVDS1 --mode 1366x768';
+  alias ext1on='xrandr --output HDMI1 --left-of eDP1 --auto';
+  alias ext2on='xrandr --output HDMI1 --right-of eDP1 --auto; sleep 1; xrandr --output HDMI2 --right-of HDMI1 --auto';
+  alias extoff='xrandr --output HDMI1 --off --output HDMI2 --off';
 fi
 
+if [ -x /usr/bin/openvpn ]; then
+  alias vpno='sudo openvpn --askpass --config ~/openvpn/scott.thomson_unprivileged.ovpn';
+  alias vpnp='sudo openvpn --askpass --config ~/openvpn/scott.thomson_vxdev_new_key.ovpn';
+fi
