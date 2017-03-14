@@ -11,6 +11,8 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias grep='grep --color=auto'
 alias fuck='sudo $(history -p \!\!)'
+alias vpno='sudo openvpn --askpass --config ~/openvpn/scott.thomson_unprivileged.ovpn';
+alias vpnp='sudo openvpn --askpass --config ~/openvpn/scott.thomson_vxdev.ovpn';
 
 # Local aliases
 #
@@ -29,7 +31,3 @@ if [ -x /usr/bin/xrandr ]; then
   alias extoff='xrandr --output HDMI1 --off --output HDMI2 --off';
 fi
 
-if [ -x /usr/bin/openvpn ]; then
-  alias vpno='sudo openvpn --askpass --config ~/openvpn/scott.thomson_unprivileged.ovpn';
-  alias vpnp='sudo openvpn --askpass --config ~/openvpn/scott.thomson_vxdev_new_key.ovpn';
-fi
