@@ -1,7 +1,7 @@
 # Preferred apps
-export VISUAL="/usr/bin/vim"
-export EDITOR="/usr/bin/vim"
-export PAGER="/usr/bin/less"
+export VISUAL="vim"
+export EDITOR="vim"
+export PAGER="less"
 
 set -o vi
 
