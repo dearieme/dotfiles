@@ -24,5 +24,10 @@ myConfig = defaultConfig
     , ("<XF86MonBrightnessDown>", spawn "xbacklight -5")
     -- For post kb hotplug...
     , ("M-<F11>", spawn "setxkbmap gb && xmodmap /home/scott/.Xmodmap")
+    -- Audio keys
+    , ("M-<F4>", spawn "/usr/bin/pulseaudio-ctl mute-input")
+    , ("M-<F3>", spawn "/usr/bin/pulseaudio-ctl up")
+    , ("M-<F2>", spawn "/usr/bin/pulseaudio-ctl down")
+    , ("M-<F1>", spawn "/usr/bin/pulseaudio-ctl mute")
     ]
 
