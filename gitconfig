@@ -1,20 +1,20 @@
 [user]
   email = scott@dearie.me.uk
-  name = dearieme
+  name  = dearieme
 [color]
   ui = auto
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  dc = diff --cached
-  lg = log -p
-  lol = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges
+  st   = status
+  ci   = commit
+  br   = branch
+  co   = checkout
+  df   = diff
+  dc   = diff --cached
+  lg   = log --no-merges
+  lol  = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges
   lola = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges --all
-  ls = ls-files
-  ign = ls-files -o -i --exclude-standard
+  ls   = ls-files
+  ign  = ls-files -o -i --exclude-standard
 [diff]
   tool = vimdiff
 [difftool]
@@ -23,3 +23,4 @@
   date = iso8601
 [rebase]
   autosquash = true
+
