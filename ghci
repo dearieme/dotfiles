@@ -1,0 +1,1 @@
+:set prompt "\ESC[1;32m%s \ESC[0;33mλ> \ESC[m"
