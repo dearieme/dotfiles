@@ -35,6 +35,9 @@ export HISTCONTROL=ignoredups
 # Set default libvirt connection URI
 [ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
 
+# Use git for fzf vim plugin
+export FZF_DEFAULT_COMMAND='git ls-files'
+
 # Set SSH to use gpg-agent where supported
 if [[ -x /usr/bin/gpg-connect-agent ]] ; then
   gpg-connect-agent updatestartuptty /bye >/dev/null
