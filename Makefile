@@ -5,6 +5,7 @@ install:
 	cp bash_aliases ${HOME}/.bash_aliases
 	cp editrc ${HOME}/.editrc
 	cp gitconfig ${HOME}/.gitconfig
+	cp ghci ${HOME}/.ghci
 	cp gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
 	cp tmux.conf ${HOME}/.tmux.conf
 	cp ssh/rc ${HOME}/.ssh/rc
