@@ -6,7 +6,7 @@ export PAGER="less"
 set -o vi
 
 # Add my local bins to path
-PATH="$HOME/.local/bin:${PATH}";
+PATH="$HOME/.local/bin:$HOME/.vim/pack/bundle/start/fzf/bin:${PATH}";
 export PATH;
 
 [ -x /usr/bin/keychain ] && eval $(keychain --eval -Q --quiet)
