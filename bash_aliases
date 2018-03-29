@@ -11,8 +11,8 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias grep='grep --color=auto'
 alias fuck='sudo $(history -p \!\!)'
-alias vpno='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_unprivileged.ovpn';
-alias vpnp='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_vxdev.ovpn';
+alias vpno='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_unprivileged.ovpn && pgrep -l openvpn';
+alias vpnp='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_vxdev.ovpn && pgrep -l openvpn';
 
 # Local aliases
 #
