@@ -7,6 +7,7 @@ install:
 	cp gitconfig ${HOME}/.gitconfig
 	cp ghci ${HOME}/.ghci
 	cp gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
+	cp init.vim ${HOME}/.config/nvim/init.vim
 	cp tmux.conf ${HOME}/.tmux.conf
 	cp ssh/rc ${HOME}/.ssh/rc
 	cp -r tmux.d/* ${HOME}/.tmux.d
