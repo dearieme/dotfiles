@@ -1,6 +1,6 @@
 # Preferred apps
-export VISUAL="vim"
-export EDITOR="vim"
+export VISUAL="nvim"
+export EDITOR="nvim"
 export PAGER="less"
 
 set -o vi
