@@ -36,7 +36,7 @@ export HISTCONTROL=ignoredups
 [ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
 
 # Use git for fzf vim plugin
-export FZF_DEFAULT_COMMAND='git ls-files'
+export FZF_DEFAULT_COMMAND='rg --files'
 
 # Set SSH to use gpg-agent where supported
 if [[ -x /usr/bin/gpg-connect-agent ]] ; then
