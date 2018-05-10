@@ -38,8 +38,9 @@ export HISTCONTROL=ignoredups
 # Use git for fzf vim plugin
 export FZF_DEFAULT_COMMAND='rg --files'
 
-# Set SSH to use gpg-agent where supported
-if [[ -x /usr/bin/gpg-connect-agent ]] ; then
+# Set SSH to use gpg-agent where supported (not on Debian cos it screws things
+# up
+if [[ -x /usr/bin/gpg-connect-agent ]] && [[ ! -e /etc/debian_version ]] ; then
   gpg-connect-agent updatestartuptty /bye >/dev/null
   unset SSH_AGENT_PID
   if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
