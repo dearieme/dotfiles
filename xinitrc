@@ -11,6 +11,5 @@ xmodmap ~/.Xmodmap
 xscreensaver -no-splash &
 unclutter &
 xfce4-power-manager &
-urxvtd -q -f -o
 
 exec xmonad

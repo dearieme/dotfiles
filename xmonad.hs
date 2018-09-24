@@ -13,7 +13,7 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myConfig = defaultConfig
-    { terminal    = "urxvtc"
+    { terminal    = "kitty"
     , modMask     = mod4Mask
     , borderWidth = 1
     , startupHook = spawnOnce "/home/scott/bin/tmux_ide.sh"

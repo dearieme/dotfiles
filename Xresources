@@ -27,9 +27,12 @@ URxvt.resize-font.bigger: C-Up
 
 ! Fonts
 !urxvt*font:        xft:Terminess Powerline:size=13
+!urxvt*font:        xft:Meslo LG M for Powerline:style=RegularForPowerline:size=9
+urxvt*font:        xft:Fira Code:style=Regular:size=13, \
+                   xft:Inconsolata for Powerline:size=12:antialias=true:hinting=slight, \
+                   xft:Symbola:size=14:antialias=true:hinting=slight, \
+                   xft:Samarkan Normal TrueType:size=14:antialias=true:hinting=slight
 
-urxvt*font:        xft:Inconsolata for Powerline:size=12
-! urxvt*font:        xft:Meslo LG M for Powerline:style=RegularForPowerline:size=9
 ! Cursor
 urxvt*cursorColor: #DCDCCC
 
