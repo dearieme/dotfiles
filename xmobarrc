@@ -1,7 +1,7 @@
 Config {
 
    -- appearance
-     font =         "xft:Inconsolata:style=Bold:size=12:antialias=true:hinting=true"
+     font =         "xft:Fira Code:style=Medium:size=11"
    , bgColor =      "black"
    , fgColor =      "#646464"
    , position =     Top
