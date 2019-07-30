@@ -11,6 +11,7 @@
   df   = diff
   dc   = diff --cached
   lg   = log --no-merges --grep 'assigning patch ids' -i --invert-grep
+  lgs  = log --no-merges --stat --grep 'assigning patch ids' -i --invert-grep
   lol  = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges
   lola = log --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges --all
   ls   = ls-files
