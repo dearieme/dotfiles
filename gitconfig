@@ -20,6 +20,11 @@
   tool = vimdiff
 [difftool]
   prompt = false
+[merge]
+  tool = vimdiff
+[mergetool]
+  keepBackup = false
+  prompt = false
 [log]
   date = iso8601
 [rebase]
