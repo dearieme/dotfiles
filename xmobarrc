@@ -1,7 +1,7 @@
 Config {
 
    -- appearance
-     font =         "xft:Fira Code:style=Medium:size=11"
+     font =         "xft:JetBrains Mono:style=Medium:size=14"
    , bgColor =      "black"
    , fgColor =      "#646464"
    , position =     Top
