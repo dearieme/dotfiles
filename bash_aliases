@@ -28,8 +28,8 @@ if [ -x /usr/bin/git ]; then
 fi
 
 if [ -x /usr/bin/xrandr ]; then
-  alias exthome='xrandr --output HDMI2 --left-of eDP1 --auto; xrandr --output eDP1 --off';
-  alias extwork='xrandr --output HDMI1 --right-of eDP1 --auto; sleep 1; xrandr --output HDMI2 --right-of HDMI1 --auto; xrandr --output eDP1 --off';
-  alias extoff='xrandr --output HDMI1 --off --output HDMI2 --off --output DP1 --off; xrandr --output eDP1 --auto';
+  alias exthome='xrandr --output HDMI2 --left-of eDP1 --primary --auto'
+  alias extwork='xrandr --output HDMI1 --right-of eDP1 --auto; sleep 1; xrandr --output HDMI2 --right-of HDMI1 --auto; xrandr --output eDP1 --off'
+  alias extoff='xrandr --output HDMI1 --off --output HDMI2 --off --output DP1 --off; xrandr --output eDP1 --auto'
 fi
 
