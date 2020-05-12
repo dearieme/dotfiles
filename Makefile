@@ -19,5 +19,6 @@ install:
 	cp xmobarrc ${HOME}/.xmobarrc
 	cp xmonad.hs ${HOME}/.xmonad/
 	cp sway/config ${HOME}/.config/sway/config
-	cp i3status/config ${HOME}/.config/i3status/config
+	cp waybar/config ${HOME}/.config/waybar/config
+	cp waybar/style.css ${HOME}/.config/waybar/style.css
 

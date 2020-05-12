@@ -1,0 +1,61 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "backlight", "battery", "cpu", "idle_inhibitor", "tray"],
+  "sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "focused": "⬤"
+    }
+  },
+  "sway/mode": {
+    "format": " {}"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "👁",
+      "deactivated": ""
+    }
+  },
+  "pulseaudio": {
+    "format": "🎜 {volume}%",
+    "format-bluetooth": "🎜 {volume}% ",
+    "format-muted": "🔇",
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "interface": "enp0s31f6",
+    "format": "{icon}",
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-disconnected": "Disconnected",
+    "format-alt": "{ipaddr}/{cidr} {icon}",
+    "format-alt-click": "on-click",
+    "format-icons": {
+      "wifi": ["", "" ,""],
+      "ethernet": ["🖧 "],
+      "disconnected": [""]
+    }
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [""]
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "clock": {
+    "format": "{:%A %Y-%m-%d %R}",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10
+  }
+}
