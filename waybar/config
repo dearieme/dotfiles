@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "backlight", "battery", "cpu", "idle_inhibitor", "tray"],
+  "modules-right": ["pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "tray"],
   "sway/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -52,6 +52,11 @@
   "clock": {
     "format": "{:%A %Y-%m-%d %R}",
     "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10
   },
   "cpu": {
     "interval": 10,
