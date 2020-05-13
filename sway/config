@@ -11,10 +11,10 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
+# Terminal emulator
 set $term kitty
 
-# Your preferred application launcher
+# Application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
@@ -25,26 +25,14 @@ gaps inner 2
 
 ### Output configuration
 
-#
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output eDP-1 bg /usr/share/backgrounds/archlinux/archlinux-carbonite-knight.jpg fill
 output HDMI-A-2 bg /usr/share/backgrounds/archlinux/archlinux-carbonite-knight.jpg  fill
-
-### Idle configuration
-exec swayidle -w \
-        timeout 300 'swaylock -f -c 000000' \
-        timeout 600 'swaymsg "output * dpms off"' \
-             resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000'
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 
@@ -71,8 +59,17 @@ input type:touchpad {
   tap_button_map lmr
 }
 
-## Control nag with keys
+### Idle configuration
+exec swayidle -w \
+        timeout 300 'swaylock -f -c 000000' \
+        timeout 600 'swaymsg "output * dpms off"' \
+             resume 'swaymsg "output * dpms on"' \
+        before-sleep 'swaylock -f -c 000000'
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
 
+### Control nag with keys
 set $nag exec swaynagmode
 mode "nag" {
   bindsym {
@@ -85,6 +82,13 @@ mode "nag" {
     Left      $nag --select next
     Right     $nag --select prev
   }
+}
+
+### Status Bar:
+
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    swaybar_command waybar
 }
 
 ### Key bindings
@@ -111,7 +115,9 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway and your Wayland session?' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -t warning \
+  -m 'Do you really want to exit sway and your Wayland session?' \
+  -b 'Yes, exit sway' 'swaymsg exit'
 
 ## Moving around:
 
@@ -128,6 +134,9 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
 ## Workspaces:
+
+# Note: workspaces can have any name you want, not just numbers.
+# We just use 1-10 as the default.
 
 # Switch to workspace
 bindsym $mod+1 workspace 1
@@ -153,8 +162,6 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
 bindsym $mod+p move workspace to output right
 
 ## Layout stuff:
@@ -205,11 +212,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym $mod+F12 exec swaylock -f -c 000000
 
 ## Resizing containers:
+bindsym $mod+r mode "resize"
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
     bindsym $left resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
@@ -218,14 +222,6 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-## Status Bar:
-
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
