@@ -1,7 +1,7 @@
 Config {
 
    -- appearance
-     font =         "xft:JetBrains Mono:style=Medium:size=12"
+     font =         "xft:JetBrains Mono:style=Bold:size=13"
    , bgColor =      "black"
    , fgColor =      "#646464"
    , position =     Top
