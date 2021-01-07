@@ -30,8 +30,7 @@ export HISTCONTROL=ignoredups
 [ -f ${HOME}/.bash_aliases ] && source ${HOME}/.bash_aliases
 
 # Freshly brewed Perl :)
-[ -f ${HOME}/perl5/perlbrew/etc/bashrc ] && source ${HOME}/perl5/perlbrew/etc/bashrc
-eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+[ -f ${HOME}/perl5/perlbrew/etc/bashrc ] && source "${PERLBREW_ROOT:-$HOME/perl5/perlbrew}"/etc/bashrc
 
 # Set default libvirt connection URI
 [ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
