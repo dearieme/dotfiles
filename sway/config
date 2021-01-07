@@ -19,6 +19,9 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+# No borders
+default_border none
+
 # Add some gaps
 gaps outer 2
 gaps inner 2
@@ -31,8 +34,9 @@ gaps inner 2
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 bg /usr/share/backgrounds/archlinux/archlinux-carbonite-knight.jpg fill
-output HDMI-A-2 bg /usr/share/backgrounds/archlinux/archlinux-carbonite-knight.jpg  fill
+output eDP-1 bg /home/scott/media/img/arch_morloch.jpg fill
+output HDMI-A-2 bg /home/scott/media/img/arch_morloch.jpg  fill
+focus output HDMI-A-2
 
 ### Input configuration
 

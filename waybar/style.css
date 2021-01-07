@@ -49,7 +49,7 @@ window#waybar.solo {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #clock, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight {
+#mode, #battery, #clock, #cpu, #memory, #network, #pulseaudio, #custom-cmus, #idle_inhibitor, #backlight {
     margin:        0px 4px;
     padding:       0px 10px;
     min-width:     25px;

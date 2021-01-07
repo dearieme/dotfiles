@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "tray"],
+  "modules-right": ["custom/cmus", "pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "tray"],
   "sway/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -22,11 +22,20 @@
     }
   },
   "pulseaudio": {
-    "format": "🎜 {volume}%",
-    "format-bluetooth": "🎜 {volume}% ",
+    "format": "🔊 {volume}%",
+    "format-bluetooth": "🔊 {volume}% ",
     "format-muted": "🔇",
     "scroll-step": 1,
     "on-click": "pavucontrol"
+  },
+  "custom/cmus": {
+    "format": "♪ {}",
+    //"max-length": 15,
+    "interval": 10,
+    "exec": "cmus-remote -C \"format_print '%a - %t'\"", // artist - title
+    "exec-if": "pgrep cmus",
+    "on-click": "cmus-remote -u",                        // toggle pause
+    "escape": true                                       // handle markup entities
   },
   "network": {
     "interface": "enp0s31f6",
