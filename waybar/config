@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
   "height": 40,
-  "modules-left": ["sway/workspaces", "sway/mode"],
-  "modules-center": ["clock"],
-  "modules-right": ["custom/cmus", "pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "tray"],
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+  "modules-center": [],
+  "modules-right": ["custom/cmus", "pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "clock"],
   "sway/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -13,7 +13,11 @@
     }
   },
   "sway/mode": {
-    "format": " {}"
+    "format": "Mode: {}"
+  },
+  "sway/window": {
+    "format": "{}",
+    "max-length": 50
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -31,7 +35,7 @@
   },
   "custom/cmus": {
     "format": "♪ {}",
-    //"max-length": 15,
+    "max-length": 48,
     "interval": 10,
     "exec": "cmus-remote -C \"format_print '%a - %t'\"", // artist - title
     "exec-if": "pgrep cmus",
@@ -60,7 +64,7 @@
     "format-icons": ["", "", "", "", ""]
   },
   "clock": {
-    "format": "{:%A %Y-%m-%d %R}",
+    "format": "{:%a %Y-%m-%d %R}",
     "tooltip": false
   },
   "memory": {
