@@ -227,4 +227,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+exec wl-paste -t text --watch clipman store
+
 include /etc/sway/config.d/*
