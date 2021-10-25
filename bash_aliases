@@ -33,3 +33,7 @@ if [ -x /usr/bin/xrandr ]; then
   alias extoff='xrandr --output HDMI1 --off --output HDMI2 --off --output DP1 --off; xrandr --output eDP1 --auto'
 fi
 
+if [ -x /usr/bin/bw ]; then
+  alias bwul='export BW_SESSION=`bw unlock --raw`'
+fi
+
