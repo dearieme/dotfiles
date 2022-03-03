@@ -37,3 +37,7 @@ if [ -x /usr/bin/bw ]; then
   alias bwul='export BW_SESSION=`bw unlock --raw`'
 fi
 
+if [ -x /usr/bin/reflector ]; then
+  alias mirrors='sudo reflector --latest 20 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist'
+fi
+
