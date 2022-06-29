@@ -30,4 +30,5 @@
   date = iso8601
 [rebase]
   autosquash = true
-
+[core]
+  excludesFile = ~/.gitignore
