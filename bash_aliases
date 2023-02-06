@@ -14,7 +14,7 @@ alias grep='grep --color=auto'
 alias fuck='sudo $(history -p \!\!)'
 alias vpno='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_unprivileged.ovpn && pgrep -l openvpn';
 alias vpnp='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_vxdev.ovpn && pgrep -l openvpn';
-alias vim='PERL5LIB=/home/scott/perl5/lib/perl5 nvim'
+alias vim='nvim'
 
 # Local aliases
 #
