@@ -12,9 +12,8 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias grep='grep --color=auto'
 alias fuck='sudo $(history -p \!\!)'
-alias vpno='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_unprivileged.ovpn && pgrep -l openvpn';
-alias vpnp='sudo openvpn --askpass --daemon --config ~/openvpn/scott.thomson_vxdev.ovpn && pgrep -l openvpn';
 alias vim='nvim'
+alias mntaud='sudo mount -t nfs -o vers=4,user 192.168.1.106:/volume1/music /media'
 
 # Local aliases
 #
@@ -27,14 +26,9 @@ if [ -x /usr/bin/git ]; then
   alias gtasks='git log -p -G "(FIXME|TODO)" origin/master.. | grep -E "FIXME|TODO" | sed -e "s/^+ \+//"'
 fi
 
-if [ -x /usr/bin/xrandr ]; then
-  alias exthome='xrandr --output HDMI2 --left-of eDP1 --primary --auto'
-  alias extwork='xrandr --output HDMI1 --right-of eDP1 --auto; sleep 1; xrandr --output HDMI2 --right-of HDMI1 --auto; xrandr --output eDP1 --off'
-  alias extoff='xrandr --output HDMI1 --off --output HDMI2 --off --output DP1 --off; xrandr --output eDP1 --auto'
-fi
-
 if [ -x /usr/bin/bw ]; then
   alias bwul='export BW_SESSION=`bw unlock --raw`'
+  alias vpno='bw get password "Oleeo VPN" | wl-copy --primary; nmcli con --ask up scott.thomson_vxdev'
 fi
 
 if [ -x /usr/bin/reflector ]; then
