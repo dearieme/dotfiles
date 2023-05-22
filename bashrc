@@ -35,6 +35,9 @@ export HISTCONTROL=ignoredups
 # Set default libvirt connection URI
 [ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
 
+# Set diff prog to nvim for pacdiff
+[ -x /usr/bin/pacdiff ] && export MERGEPROG="nvim -d"
+
 # Use git for fzf vim plugin
 export FZF_DEFAULT_COMMAND='rg --files'
 

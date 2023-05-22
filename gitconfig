@@ -18,17 +18,20 @@
   ls   = ls-files
   ign  = ls-files -o -i --exclude-standard
 [diff]
-  tool = vimdiff
+  tool = nvimdiff
 [difftool]
   prompt = false
 [merge]
-  tool = vimdiff
+  tool = nvim
 [mergetool]
   keepBackup = false
   prompt = false
+[mergetool "nvim"]
+  cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [log]
   date = iso8601
 [rebase]
   autosquash = true
 [core]
+  quotepath = off
   excludesFile = ~/.gitignore
