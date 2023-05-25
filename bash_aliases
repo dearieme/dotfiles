@@ -13,7 +13,6 @@ alias rm='rm -i'
 alias grep='grep --color=auto'
 alias fuck='sudo $(history -p \!\!)'
 alias vim='nvim'
-alias mntaud='sudo mount -t nfs -o vers=4,user 192.168.1.106:/volume1/music /media'
 
 # Local aliases
 #
@@ -34,4 +33,7 @@ fi
 if [ -x /usr/bin/reflector ]; then
   alias mirrors='sudo reflector --latest 20 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist'
 fi
+
+ping -q -w 1 192.168.1.106 > /dev/null 2>&1
+[ $? -eq 0 ] && alias mntaud='sudo mount -t nfs -o vers=4,user 192.168.1.106:/volume1/music /media'
 
