@@ -2,7 +2,7 @@
     border:        none;
     border-radius: 0;
     font-family:   "JetBrains Mono, FontAwesome";
-    font-size:     14px;
+    font-size:     15px;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;
@@ -49,11 +49,11 @@ window#waybar.solo {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #window, #battery, #clock, #cpu, #memory, #network, #pulseaudio, #custom-cmus, #idle_inhibitor, #backlight {
+#submap, #window, #battery, #clock, #cpu, #memory, #network, #pulseaudio, #custom-cmus, #idle_inhibitor, #backlight {
     margin:        0px 4px;
     padding:       0px 10px;
     min-width:     25px;
-    border-radius: 20px;
+    border-radius: 10px;
     transition:    none;
     background: rgba(119, 136, 153, 0.85);
 }

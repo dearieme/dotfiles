@@ -13,7 +13,7 @@
     }
   },
   "hyprland/submap": {
-    "format": "Mode: {}"
+    "format": "✌️{}"
   },
   "hyprland/window": {
     "format": "👉 {}",
@@ -74,7 +74,7 @@
   },
   "cpu": {
     "interval": 10,
-    "format": " {}%",
+    "format": " {usage:2}%",
     "max-length": 10
   }
 }
