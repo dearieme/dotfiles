@@ -27,7 +27,7 @@ fi
 
 if [ -x /usr/bin/bw ]; then
   alias bwul='export BW_SESSION=`bw unlock --raw`'
-  alias vpno='bw get password "Oleeo VPN" | wl-copy --primary; nmcli con --ask up scott.thomson_vxdev'
+  alias vpno='bw get password "Oleeo VPN" | wl-copy --primary --paste-once; nmcli con --ask up scott.thomson_vxdev'
 fi
 
 if [ -x /usr/bin/reflector ]; then
