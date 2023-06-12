@@ -15,7 +15,6 @@ install:
 	cp kitty.conf ${HOME}/.config/kitty/kitty.conf
 	cp mako/config ${HOME}/.config/mako/config
 	cp ssh/rc ${HOME}/.ssh/rc
-	cp sway/config ${HOME}/.config/sway/config
 	cp swayidle/config ${HOME}/.config/swayidle/config
 	cp tmux.conf ${HOME}/.tmux.conf
 	cp tmux_ide.sh ${HOME}/.local/bin/
