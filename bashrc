@@ -1,6 +1,7 @@
 # Preferred apps
 export VISUAL="nvim"
 export EDITOR="nvim"
+export DIFFPROG="nvim -d"
 export PAGER="less"
 
 set -o vi
