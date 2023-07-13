@@ -2,6 +2,8 @@
   "layer": "top",
   "position": "top",
   "height": 40,
+  "margin-left": 8,
+  "margin-right": 8,
   "modules-left": ["wlr/workspaces", "hyprland/submap", "hyprland/window"],
   "modules-center": [],
   "modules-right": ["custom/cmus", "pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "clock"],
@@ -61,7 +63,12 @@
   },
   "battery": {
     "format": "{icon} {capacity}%",
-    "format-icons": ["", "", "", "", ""]
+    "format-critical": "{icon} {capacity}%",
+    "format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-full": "  {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
   },
   "clock": {
     "format": "{:%a %Y-%m-%d %R}",
