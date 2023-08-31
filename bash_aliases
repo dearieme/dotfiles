@@ -32,7 +32,7 @@ if [ -x /usr/bin/bw ]; then
 fi
 
 if [ -x /usr/bin/reflector ]; then
-  alias mirrors='sudo reflector --latest 20 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist'
+  alias mirrors='sudo reflector --latest 20 --protocol http,https --country gb --sort rate --save /etc/pacman.d/mirrorlist'
 fi
 
 ping -q -w 1 192.168.1.106 > /dev/null 2>&1
