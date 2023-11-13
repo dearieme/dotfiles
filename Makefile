@@ -12,6 +12,8 @@ install:
 	cp gitignore ${HOME}/.gitignore
 	cp gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
 	cp hypr/hyprland.conf ${HOME}/.config/hypr/hyprland.conf
+	cp hypr/lid_switch.sh ${HOME}/.config/hypr/lid_switch.sh
+	chmod 755 ${HOME}/.config/hypr/lid_switch.sh
 	cp helix/config.toml ${HOME}/.config/helix/config.toml
 	cp kitty.conf ${HOME}/.config/kitty/kitty.conf
 	cp mako/config ${HOME}/.config/mako/config
