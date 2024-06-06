@@ -33,6 +33,9 @@ export HISTCONTROL=ignoredups
 # Freshly brewed Perl :)
 [ -f ${HOME}/perl5/perlbrew/etc/bashrc ] && source "${PERLBREW_ROOT:-$HOME/perl5/perlbrew}"/etc/bashrc
 
+# Local rust if installed
+[ -f ${HOME}/.cargo/env ] && source ${HOME}/.cargo/env
+
 # Set default libvirt connection URI
 [ -x /usr/bin/virsh ] && export LIBVIRT_DEFAULT_URI=qemu:///system
 
