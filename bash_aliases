@@ -19,7 +19,7 @@ alias vim='nvim'
 [ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
 [ -x /usr/bin/ack-grep ]    && alias ack='ack-grep'
 [ -x /usr/bin/tmux ]        && alias tmux='tmux -2'
-[ -x /usr/bin/helix ]       && alias hx='helix'
+[ -x /usr/bin/Hyprland ]    && alias hypr='ssh-agent Hyprland'
 
 if [ -x /usr/bin/git ]; then
   alias gim='vim -O2 `git status -uall --short | awk '"'"'{print $2}'"'"'`'
