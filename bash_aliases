@@ -35,6 +35,6 @@ if [ -x /usr/bin/reflector ]; then
   alias mirrors='sudo reflector --latest 20 --protocol http,https --country gb --sort rate --save /etc/pacman.d/mirrorlist'
 fi
 
-ping -q -w 1 192.168.1.106 > /dev/null 2>&1
-[ $? -eq 0 ] && alias mntaud='sudo mount -t nfs -o vers=4,user 192.168.1.106:/volume1/music /media'
+ping -q -w 1 bignasty > /dev/null 2>&1
+[ $? -eq 0 ] && alias mntaud='sudo mount -t nfs -o vers=4,user bignasty:/volume1/music /media'
 
