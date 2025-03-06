@@ -1,5 +1,4 @@
 install:
-	cp -r tmux.d/* ${HOME}/.tmux.d
 	cp Xmodmap ${HOME}/.Xmodmap
 	cp Xresources ${HOME}/.Xresources
 	cp bash_aliases ${HOME}/.bash_aliases
@@ -20,7 +19,6 @@ install:
 	cp ssh/rc ${HOME}/.ssh/rc
 	cp swayidle/config ${HOME}/.config/swayidle/config
 	cp tmux.conf ${HOME}/.tmux.conf
-	cp tmux_ide.sh ${HOME}/.local/bin/
 	cp waybar/config ${HOME}/.config/waybar/config
 	cp waybar/style.css ${HOME}/.config/waybar/style.css
 	cp xinitrc ${HOME}/.xinitrc
