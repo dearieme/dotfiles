@@ -1,8 +1,8 @@
 * {
     border:        none;
     border-radius: 0;
-    font-family:   "JetBrains Mono, FontAwesome";
-    font-size:     15px;
+    font-family:   "JetBrains Mono, FontAwesome, NotoSans";
+    font-size:     @WAYBAR_FONT_SIZE@;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;

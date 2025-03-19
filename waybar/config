@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 40,
+  "height": @WAYBAR_HEIGHT@,
   "margin-left": 8,
   "margin-right": 8,
   "modules-left": ["wlr/workspaces", "hyprland/submap", "hyprland/window"],

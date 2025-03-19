@@ -1,0 +1,10 @@
+# config.mk.example
+# A cheap and cheerful way of parameterizing my dotfiles for different laptops,
+# mainly for the different screens
+
+MAIN_MONITOR_SCALE = 1.5
+EXT_MONITOR = HDMI-A-1
+KITTY_FONT_SIZE = 11.0
+WAYBAR_HEIGHT = 32
+WAYBAR_FONT_SIZE = 14px
+
