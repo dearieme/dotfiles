@@ -41,7 +41,7 @@ install:
 	install -m 644 hypr/hyprlock.conf ${HYPR_DIR}/hyprlock.conf
 	install -m 644 hypr/hypridle.conf ${HYPR_DIR}/hypridle.conf
 	
-	sed -e 's|@EXT_MONITOR@|$(EXT_MONITOR)|g' \
+	sed -e 's/@MAIN_MONITOR_SCALE@/$(MAIN_MONITOR_SCALE)/g' \
 	    hypr/lid_switch.sh > $(TMP_CONFIG_FILE)
 	install -m 755 ${TMP_CONFIG_FILE} ${HYPR_DIR}/lid_switch.sh
 	
