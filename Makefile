@@ -17,7 +17,6 @@ install:
 	install -d ${SSH_DIR} ${GPG_DIR} ${HYPR_DIR} ${KITTY_DIR} ${MAKO_DIR} ${WAYBAR_DIR}
 	
 	install -m 644 Xmodmap ${PREFIX}/.Xmodmap
-	install -m 644 Xresources ${PREFIX}/.Xresources
 	install -m 644 bash_aliases ${PREFIX}/.bash_aliases
 	install -m 644 bash_logout ${PREFIX}/.bash_logout
 	install -m 644 bash_profile ${PREFIX}/.bash_profile
@@ -27,7 +26,6 @@ install:
 	install -m 644 gitconfig ${PREFIX}/.gitconfig
 	install -m 644 gitignore ${PREFIX}/.gitignore
 	install -m 644 tmux.conf ${PREFIX}/.tmux.conf
-	install -m 644 xinitrc ${PREFIX}/.xinitrc
 	
 	install -m 644 ssh/rc ${SSH_DIR}/rc
 	install -m 644 gpg-agent.conf ${GPG_DIR}/gpg-agent.conf
