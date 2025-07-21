@@ -26,6 +26,7 @@ install:
 	install -m 644 bash_profile ${PREFIX}/.bash_profile
 	install -m 644 bashrc ${PREFIX}/.bashrc
 	install -m 644 editrc ${PREFIX}/.editrc
+	install -m 644 inputrc ${PREFIX}/.inputrc
 	install -m 644 ghci ${PREFIX}/.ghci
 	install -m 644 gitconfig ${PREFIX}/.gitconfig
 	install -m 644 gitignore ${PREFIX}/.gitignore
