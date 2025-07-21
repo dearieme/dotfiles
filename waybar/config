@@ -4,7 +4,7 @@
   "height": @WAYBAR_HEIGHT@,
   "margin-left": 8,
   "margin-right": 8,
-  "modules-left": ["wlr/workspaces", "hyprland/submap", "hyprland/window"],
+  "modules-left": ["wlr/workspaces", "niri/workspaces", "hyprland/submap", "hyprland/window", "niri/window"],
   "modules-center": [],
   "modules-right": ["custom/cmus", "pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "clock"],
   "wlr/workspaces": {
@@ -12,6 +12,19 @@
     "format-icons": {
       "default": "",
       "focused": "⬤"
+    }
+  },
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+  "niri/window": {
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "🌎 $1"
     }
   },
   "hyprland/submap": {

@@ -3,18 +3,22 @@ include config.mk
 SHELL := /bin/bash
 
 PREFIX ?= ${HOME}
+CONFIG_DIR := ${PREFIX}/.config
 
-SSH_DIR    := ${PREFIX}/.ssh
-GPG_DIR    := ${PREFIX}/.gnupg
-HYPR_DIR   := ${PREFIX}/.config/hypr
-KITTY_DIR  := ${PREFIX}/.config/kitty
-MAKO_DIR   := ${PREFIX}/.config/mako
-WAYBAR_DIR := ${PREFIX}/.config/waybar
+SSH_DIR      := ${PREFIX}/.ssh
+GPG_DIR      := ${PREFIX}/.gnupg
+HYPR_DIR     := ${CONFIG_DIR}/hypr
+KITTY_DIR    := ${CONFIG_DIR}/kitty
+MAKO_DIR     := ${CONFIG_DIR}/mako
+WAYBAR_DIR   := ${CONFIG_DIR}/waybar
+NIRI_DIR     := ${CONFIG_DIR}/niri
+SWAYIDLE_DIR := ${CONFIG_DIR}/swayidle
 
 TMP_CONFIG_FILE := config.tmp
 
 install:
-	install -d ${SSH_DIR} ${GPG_DIR} ${HYPR_DIR} ${KITTY_DIR} ${MAKO_DIR} ${WAYBAR_DIR}
+	install -d ${SSH_DIR} ${GPG_DIR} ${HYPR_DIR} ${KITTY_DIR} ${MAKO_DIR} \
+		${WAYBAR_DIR} ${NIRI_DIR} ${SWAYIDLE_DIR}
 	
 	install -m 644 Xmodmap ${PREFIX}/.Xmodmap
 	install -m 644 bash_aliases ${PREFIX}/.bash_aliases
@@ -38,6 +42,9 @@ install:
 	install -m 644 hypr/hyprpaper.conf ${HYPR_DIR}/hyprpaper.conf
 	install -m 644 hypr/hyprlock.conf ${HYPR_DIR}/hyprlock.conf
 	install -m 644 hypr/hypridle.conf ${HYPR_DIR}/hypridle.conf
+
+	install -m 644 niri/config.kdl ${NIRI_DIR}/config.kdl
+	install -m 644 swayidle/config ${SWAYIDLE_DIR}/config
 	
 	sed -e 's/@MAIN_MONITOR_SCALE@/$(MAIN_MONITOR_SCALE)/g' \
 	    hypr/lid_switch.sh > $(TMP_CONFIG_FILE)
