@@ -4,7 +4,7 @@
   "height": @WAYBAR_HEIGHT@,
   "margin-left": 8,
   "margin-right": 8,
-  "modules-left": ["wlr/workspaces", "niri/workspaces", "hyprland/submap", "hyprland/window", "niri/window"],
+  "modules-left": ["niri/workspaces", "niri/window"],
   "modules-center": [],
   "modules-right": ["custom/cmus", "pulseaudio", "network", "backlight", "battery", "memory", "cpu", "idle_inhibitor", "clock"],
   "wlr/workspaces": {
@@ -22,17 +22,12 @@
     }
   },
   "niri/window": {
+    "separate-outputs": true,
     "format": "{}",
     "rewrite": {
-      "(.*) — Mozilla Firefox": "🌎 $1"
+      "(.*) — Mozilla Firefox": "🌎 $1",
+      "(.+:.+):(.+) - (.*)": " $1 - $2 - $3",
     }
-  },
-  "hyprland/submap": {
-    "format": "✌️{}"
-  },
-  "hyprland/window": {
-    "format": "👉 {}",
-    "separate-outputs": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -58,16 +53,15 @@
     "escape": true                                       // handle markup entities
   },
   "network": {
-    "interface": "enp0s31f6",
     "format": "{icon}",
-    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-wifi": "{icon} {essid} ({signalStrength}%)",
     "format-disconnected": "Disconnected",
     "format-alt": "{ipaddr}/{cidr} {icon}",
     "format-alt-click": "on-click",
     "format-icons": {
-      "wifi": ["", "" ,""],
-      "ethernet": ["🖧 "],
-      "disconnected": [""]
+      "wifi": ["󰤟 ", "󰤢  ", "󰤥 ", "󰤨 "],
+      "ethernet": [" 🖧 "],
+      "disconnected": ["󰖪 "]
     }
   },
   "backlight": {
