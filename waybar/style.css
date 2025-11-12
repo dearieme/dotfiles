@@ -10,15 +10,16 @@
 
 window {
     color:      white;
-    background: rgba(1, 1, 1, 0.40);
+    background: rgba(1, 1, 1, 0.4);
 }
 
 window#waybar.solo {
-    background: rgba(1, 1, 1, 0.40);
+    background: rgba(1, 1, 1, 0.4);
 }
 
 #workspaces {
-    background: rgba(40, 42, 54, 0.85);
+    background: rgba(40, 42, 54, 0.4);
+    border-radius: 10px;
     transition: none;
 }
 

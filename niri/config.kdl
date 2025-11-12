@@ -94,11 +94,12 @@ output "eDP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    // position x=1280 y=0
+    position x=-3840 y=0
 }
 
 output "@EXT_MONITOR@" {
   scale 1.0
+  // position x=2880 y=0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -106,7 +107,7 @@ output "@EXT_MONITOR@" {
 
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 8
+    gaps 4
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -250,6 +251,7 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-at-startup "swayidle" "-w"
+spawn-at-startup "swaybg" "-i" "~/media/img/broody_beach_thai.jpg"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -329,7 +331,7 @@ binds {
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
 
     // Volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
+    // allow-when-locked=true makes them work when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true {
         spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "3%+";
     }
@@ -341,6 +343,14 @@ binds {
     }
     XF86AudioMicMute allow-when-locked=true {
         spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
+    }
+
+    // Brighnessctl keys
+    XF86MonBrightnessDown {
+      spawn "brightnessctl" "set" "5%-";
+    }
+    XF86MonBrightnessUp {
+      spawn "brightnessctl" "set" "+5%";
     }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
@@ -430,8 +440,12 @@ binds {
     // These binds are also affected by touchpad's natural-scroll, so these
     // example binds are "inverted", since we have natural-scroll enabled for
     // touchpads by default.
-    // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    // Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
+    // Mod+TouchpadScrollDown {
+    //   spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+";
+    // }
+    // Mod+TouchpadScrollUp {
+    //   spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-";
+    // }
 
     // You can refer to workspaces by index. However, keep in mind that
     // niri is a dynamic workspace system, so these commands are kind of
@@ -501,12 +515,12 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Mod+Minus { set-column-width "-5%"; }
-    Mod+Equal { set-column-width "+5%"; }
+    Mod+Minus { set-column-width "-2%"; }
+    Mod+Equal { set-column-width "+2%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-5%"; }
-    Mod+Shift+Equal { set-window-height "+5%"; }
+    Mod+Shift+Minus { set-window-height "-2%"; }
+    Mod+Shift+Equal { set-window-height "+2%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }
@@ -521,7 +535,7 @@ binds {
     // Note: if you uncomment these, make sure you do NOT have
     // a matching layout switch hotkey configured in xkb options above.
     // Having both at once on the same hotkey will break the switching,
-    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
+    // since it will switch twice upon pressing the hotkey
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
