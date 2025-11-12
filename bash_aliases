@@ -27,7 +27,7 @@ if [ -x /usr/bin/git ]; then
 fi
 
 if [ -x /usr/bin/bw ]; then
-  alias bwul='export BW_SESSION=`bw unlock --raw`'
+  alias bwul='export BW_SESSION=`bw unlock --raw`; [[ x"${BW_SESSION}" != x"" ]]'
   alias vpno='bw get password "Oleeo VPN" | wl-copy --primary --paste-once; nmcli con --ask up scott.thomson_vxdev'
 fi
 
