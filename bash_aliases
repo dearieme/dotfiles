@@ -36,5 +36,5 @@ if [ -x /usr/bin/reflector ]; then
 fi
 
 ping -q -w 1 bignasty > /dev/null 2>&1
-[ $? -eq 0 ] && alias mntaud='sudo mount -t nfs -o vers=4,user bignasty:/volume1/music /media'
+[ $? -eq 0 ] && alias mntaud='sudo mount -t nfs -o vers=4,user bignasty:/volume1/music /media/music' && alias mntvid='sudo mount -t nfs -o vers=4,user bignasty:/volume1/video /media/video'
 
