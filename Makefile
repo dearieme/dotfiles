@@ -31,6 +31,7 @@ install:
 	install -m 644 ssh/rc ${SSH_DIR}/rc
 	install -m 644 gpg-agent.conf ${GPG_DIR}/gpg-agent.conf
 	install -m 644 mako/config ${MAKO_DIR}/config
+	install -m 644 niri/dms/binds.kdl ${NIRI_DIR}/dms/binds.kdl
 
 	sed -e 's/@MAIN_MONITOR_SCALE@/$(MAIN_MONITOR_SCALE)/g' \
 	    -e 's|@EXT_MONITOR@|$(EXT_MONITOR)|g' \
