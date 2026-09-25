@@ -12,7 +12,7 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias grep='grep --color=auto'
 alias fuck='sudo $(history -p \!\!)'
-alias vim='nvim'
+alias less='less -FRX'
 
 # Local aliases
 #
