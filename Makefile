@@ -10,12 +10,13 @@ GPG_DIR      := ${PREFIX}/.gnupg
 KITTY_DIR    := ${CONFIG_DIR}/kitty
 MAKO_DIR     := ${CONFIG_DIR}/mako
 NIRI_DIR     := ${CONFIG_DIR}/niri
+ZATHURA_DIR  := ${CONFIG_DIR}/zathura
 
 TMP_CONFIG_FILE := config.tmp
 
 install:
 	install -d ${SSH_DIR} ${GPG_DIR} ${KITTY_DIR} ${MAKO_DIR} \
-		${NIRI_DIR} ${NIRI_DIR}/dms
+		${NIRI_DIR} ${NIRI_DIR}/dms ${ZATHURA_DIR}
 	
 	install -m 644 Xmodmap ${PREFIX}/.Xmodmap
 	install -m 644 bash_aliases ${PREFIX}/.bash_aliases
@@ -32,6 +33,7 @@ install:
 	install -m 644 gpg-agent.conf ${GPG_DIR}/gpg-agent.conf
 	install -m 644 mako/config ${MAKO_DIR}/config
 	install -m 644 niri/dms/binds.kdl ${NIRI_DIR}/dms/binds.kdl
+	install -m 644 zathurarc ${ZATHURA_DIR}/zathurarc
 
 	sed -e 's/@MAIN_MONITOR_SCALE@/$(MAIN_MONITOR_SCALE)/g' \
 	    -e 's|@EXT_MONITOR@|$(EXT_MONITOR)|g' \

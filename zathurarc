@@ -1,0 +1,2 @@
+map O exec "zathura \"$FILE\""
+
