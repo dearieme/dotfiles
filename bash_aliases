@@ -1,18 +1,18 @@
 # Global aliases, normally available on all machines
 #
-alias l='ls'
-alias ll='ls -l'
-alias l.='ls -A'
-alias ll.='ls -al'
-alias l10='ls -lt | head'
-alias ls='ls --color=auto'
-alias du1='du -h --max-depth=1'
-alias mv='mv -i'
 alias cp='cp -i'
-alias rm='rm -i'
-alias grep='grep --color=auto'
+alias du1='du -h --max-depth=1'
 alias fuck='sudo $(history -p \!\!)'
+alias grep='grep --color=auto'
+alias l.='ls -A'
+alias l10='ls -lt | head'
+alias l='ls'
 alias less='less -FRX'
+alias ll.='ls -al'
+alias ll='ls -l'
+alias ls='ls --color=auto'
+alias mv='mv -i'
+alias rm='rm -i'
 
 # Local aliases
 #
@@ -20,6 +20,7 @@ alias less='less -FRX'
 [ -x /usr/bin/ack-grep ]    && alias ack='ack-grep'
 [ -x /usr/bin/tmux ]        && alias tmux='tmux -2'
 [ -x /usr/bin/niri ]        && alias niri='ssh-agent niri-session'
+[ -x /usr/bin/kitty ]       && alias s='kitten ssh'
 
 if [ -x /usr/bin/git ]; then
   alias gim='vim -O2 `git status -uall --short | awk '"'"'{print $2}'"'"'`'
