@@ -266,23 +266,28 @@ spawn-at-startup "noctalia"
 // include "dms/windowrules.kdl"
 
 binds {
+    Mod+Return { spawn "kitty"; }
+
     // Core Noctalia binds
     Mod+Space       { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S           { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Shift+Comma { spawn-sh "noctalia msg settings-toggle"; }
     Alt+Tab         { spawn-sh "noctalia msg window-switcher hold"; }
     Mod+Alt+L       { spawn-sh "noctalia msg session lock"; }
-    // Niri has a built-in window switcher you might want to try it to see which
-    // one you prefer.
 
     // Audio & Brightness
     XF86AudioRaiseVolume  { spawn-sh "noctalia msg volume-up"; }
     XF86AudioLowerVolume  { spawn-sh "noctalia msg volume-down"; }
     XF86AudioMute         { spawn-sh "noctalia msg volume-mute"; }
+
+    // Media control
+    XF86AudioPlay         { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioNext         { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev         { spawn-sh "noctalia msg media previous"; }
+
+    // Brightness
     XF86MonBrightnessUp   { spawn-sh "noctalia msg brightness-up"; }
     XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
-
-    Mod+Return { spawn "kitty"; }
 
     // Window Management
     Mod+D repeat=false { toggle-overview; }
