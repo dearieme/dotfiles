@@ -19,7 +19,7 @@ alias rm='rm -i'
 [ -x /usr/bin/notify-send ] && alias tea='echo "notify-send -i dialog-information -t 0 \"Tea!\" \"Your tea is nicely brewed\"" | at now +4 minutes'
 [ -x /usr/bin/ack-grep ]    && alias ack='ack-grep'
 [ -x /usr/bin/tmux ]        && alias tmux='tmux -2'
-[ -x /usr/bin/niri ]        && alias niri='ssh-agent niri-session'
+[ -x /usr/bin/niri ]        && alias niri='niri-session'
 [ -x /usr/bin/kitty ]       && alias s='kitten ssh'
 
 if [ -x /usr/bin/git ]; then

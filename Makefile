@@ -5,7 +5,6 @@ SHELL := /bin/bash
 PREFIX ?= ${HOME}
 CONFIG_DIR := ${PREFIX}/.config
 
-SSH_DIR      := ${PREFIX}/.ssh
 GPG_DIR      := ${PREFIX}/.gnupg
 PICTURES_DIR := ${PREFIX}/Pictures
 KITTY_DIR    := ${CONFIG_DIR}/kitty
@@ -32,7 +31,6 @@ install:
 	install -m 644 gitignore ${PREFIX}/.gitignore
 	install -m 644 tmux.conf ${PREFIX}/.tmux.conf
 	install -m 644 Pictures/runival_sky_cwt.jpg ${PICTURES_DIR}/runival_sky_cwt.jpg
-	install -m 644 ssh/rc ${SSH_DIR}/rc
 	install -m 644 gpg-agent.conf ${GPG_DIR}/gpg-agent.conf
 	install -m 644 mako/config ${MAKO_DIR}/config
 	install -m 644 noctalia/config.toml ${NOCTALIA_DIR}/config.toml
